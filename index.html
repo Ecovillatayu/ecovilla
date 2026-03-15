@@ -297,23 +297,44 @@ Scrivici su WhatsApp
 <section>
 <h2>Disponibilità</h2>
 
-<p style="font-size:18px;">
-Check real availability in our calendars:
-</p>
+<div id="calendar" style="max-width:800px;margin:auto;"></div>
 
-<a href="https://ical.booking.com/v1/export?t=0306119f-cd00-4e91-b5eb-fc1274fe5d0f" target="_blank"
-style="background:#003580;color:white;padding:16px 30px;font-size:20px;
-text-decoration:none;border-radius:8px;display:inline-block;margin:10px;">
-📅 View Booking Calendar
-</a>
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
-<br>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
 
-<a href="https://airbnb.com/calendar/ical/873081.ics?t=5a443889f1b5434c90073484e1f5d7e5" target="_blank"
-style="background:#ff5a5f;color:white;padding:16px 30px;font-size:20px;
-text-decoration:none;border-radius:8px;display:inline-block;margin:10px;">
-🏠 View Airbnb Calendar
-</a>
+var calendarEl = document.getElementById('calendar');
+
+var calendar = new FullCalendar.Calendar(calendarEl, {
+
+initialView: 'dayGridMonth',
+
+height: 600,
+
+events: [
+
+{
+url: "https://ical.booking.com/v1/export?t=0306119f-cd00-4e91-b5eb-fc1274fe5d0f",
+format: 'ics'
+},
+
+{
+url: "https://airbnb.com/calendar/ical/873081.ics?t=5a443889f1b5434c90073484e1f5d7e5",
+format: 'ics'
+}
+
+],
+
+eventColor: '#ff4d4d'
+
+});
+
+calendar.render();
+
+});
+</script>
 
 </section>
 <a href="https://wa.me/34669480243" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;font-size:20px;text-decoration:none;">💬</a>
