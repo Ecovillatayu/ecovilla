@@ -297,44 +297,14 @@ Scrivici su WhatsApp
 <section>
 <h2>Disponibilità</h2>
 
-<div id="calendar" style="max-width:800px;margin:auto;"></div>
-
-<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-
-var calendarEl = document.getElementById('calendar');
-
-var calendar = new FullCalendar.Calendar(calendarEl, {
-
-initialView: 'dayGridMonth',
-
-height: 600,
-
-events: [
-
-{
-url: "https://ical.booking.com/v1/export?t=0306119f-cd00-4e91-b5eb-fc1274fe5d0f",
-format: 'ics'
-},
-
-{
-url: "https://airbnb.com/calendar/ical/873081.ics?t=5a443889f1b5434c90073484e1f5d7e5",
-format: 'ics'
-}
-
-],
-
-eventColor: '#ff4d4d'
-
-});
-
-calendar.render();
-
-});
-</script>
+<iframe 
+src="https://calendar.google.com/calendar/embed?src=s1qahcehccmgklur1sckajifod506qmv%40import.calendar.google.com&ctz=Atlantic%2FCanary"
+style="border:0" 
+width="100%" 
+height="600" 
+frameborder="0" 
+scrolling="no">
+</iframe>
 
 </section>
 <a href="https://wa.me/34669480243" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;font-size:20px;text-decoration:none;">💬</a>
